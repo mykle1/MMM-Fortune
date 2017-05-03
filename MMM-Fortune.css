@@ -4,52 +4,30 @@
  * Pick your color, copy and paste the HEX number. Example - #62FF00 = bright green.
  */
 
-.MMM-Cocktails .header {
+.MMM-Fortune .header {
   text-align: center;       /* Aligns header text left, center or right) */
   font-size: 15px;          /* Sets header text size */
-  color: white;             /* Sets header text color */
+  color: #62FF00;             /* Sets header text color */
 }
 
-.MMM-Cocktails h3.small {
-  color: #99F;              /* color for Title text */
-  font-size: 25px;          /* size for Title text */
+.MMM-Fortune h3.small {
+  color: #62FF00;              /* color for the Fortune text */
+  font-size: 21px;          /* size for the Fortune text */
 }
 
-.MMM-Cocktails p.xsmall.bright {
-  color: #99F;              /* color for main body text */
-  font-size: 18px;          /* size for main body text */
+.MMM-Fortune p.xsmall.bright {
+  color: #62FF00;              /* color for Phrase and Lucky Numbers text */
+  font-size: 18px;          /* size for Phrase and Lucky Numbers text */
 }
-
-.MMM-Cocktails .imgDes {
-  width: 20%;               /* width of picture */
-  height: 20%;              /* height of picture */
-  margin-left: 10px;
-  margin-right: 10px;
-  overflow: hidden;
-  float: left;              /* position of picture */
-}
-
-/* To hide picture copy and paste code BELOW into custom.css file
-.MMM-Cocktails .imgDes {
-  display: none;            /* hides the picture if you don't want it
-}
-/* To hide picture copy and paste code ABOVE into custom.css file */
-
 
 
 /* ##### CODE BELOW IS FOR AUTHORIZED PERSONNEL ONLY ##### */
 
-.MMM-Cocktails .content {
+.MMM-Fortune .content {
   width: 100%;
   background-position: 11px 0;
   background-repeat: no-repeat;
   color: #a9a356;
-}
-
-.MMM-Cocktails .imgDes p {
-  font-size: 12px;
-  text-align: left;
-  padding-bottom: 15px;
 }
 
 h3:first-letter {

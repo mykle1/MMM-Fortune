@@ -12,7 +12,7 @@
            fadeSpeed: 3000,
            initialLoadDelay: 1250, // ms seconds delay
            retryDelay: 2500,
-           header: "Good luck!",
+           header: "Opening your fortune cookie!",
            maxWidth: "400px",
        },
 
@@ -62,27 +62,23 @@
            var top = document.createElement("div");
            top.classList.add("content");
 
-        /* var fortuneLogo = document.createElement("div");
-           var fortuneIcon = document.createElement("img");
-           fortuneIcon.src = fortune.strDrinkThumb;
-           fortuneIcon.classList.add("imgDes");
-           fortuneLogo.appendChild(fortuneIcon);
-           top.appendChild(fortuneLogo);
-		*/
+        
            var title = document.createElement("h3");
            title.classList.add("small");
-           if (this.fortune === " ") {
-               title.innerHTML = fortune.message + " Marker 1 ";
-           } else {
-               title.innerHTML = this.fortune + "  Marker 2  "; // this.fortune NULL?
-           }
+           title.innerHTML = this.fortune.message; // <- Objects goes in there 
            top.appendChild(title);
 
 
            var des = document.createElement("p");
            des.classList.add("xsmall", "bright");
-           des.innerHTML = this.fortune + " Marker 3 "; // this.fortune NULL?
+           des.innerHTML = 'English phrase:  ' + '&nbsp; ' + this.lesson.english + '&nbsp; ' + '&nbsp; ' + 'In Chinese:  ' + '&nbsp; ' + this.lesson.chinese + '&nbsp; ' + '&nbsp; ' + '  Pronounced:  ' + this.lesson.pronunciation; // <- Objects goes in there
            top.appendChild(des);
+		   
+		   
+		   var des2 = document.createElement("p");
+           des2.classList.add("xsmall", "bright");
+           des2.innerHTML = 'Lucky Numbers' + '&nbsp; ' + ' ~   ' + '&nbsp; ' + this.lotto.numbers; // <- Objects goes in there
+           top.appendChild(des2);
 
            wrapper.appendChild(top);
            return wrapper;
@@ -92,7 +88,9 @@
        processFortune: function(data) {
            //	console.log(data);
            //this.today = data.Today;
-           this.fortune = data;
+           this.fortune = data.fortune;
+		   this.lesson = data.lesson;
+		   this.lotto = data.lotto;
            this.loaded = true;
        },
 
