@@ -5,13 +5,11 @@ A MagicMirror module that gives you free Fortune Cookie fortunes.
 
 ![](Capture2.JPG)
 
-![](Capture3JPG)
+![](Capture3.JPG)
 
 ![](Capture5.JPG)
 
 * maxWidth: 100%, colored title text. Editable text sizes and colors. top/bottom_bar, upper/lower_third, middle_center.
-
-![](stretch.JPG)
 
 
 ## Fortunes are fun!
