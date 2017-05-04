@@ -13,7 +13,7 @@
            initialLoadDelay: 1250, // ms seconds delay
            retryDelay: 2500,
            header: "Opening your fortune cookie!",
-           maxWidth: "400px",
+           maxWidth: "100%",
        },
 
        // Define required scripts.
