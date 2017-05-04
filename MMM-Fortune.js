@@ -41,10 +41,10 @@
        getDom: function() {
 
            var fortune = this.fortune;
-			var lesson = this.lesson;
-			var lotto = this.lotto;
-			
-			
+           var lesson = this.lesson;
+           var lotto = this.lotto;
+
+
            var wrapper = document.createElement("div");
            wrapper.className = "wrapper";
            wrapper.style.maxWidth = this.config.maxWidth;
@@ -65,7 +65,7 @@
            var top = document.createElement("div");
            top.classList.add("content");
 
-        
+
            var title = document.createElement("h3");
            title.classList.add("small");
            title.innerHTML = this.fortune.message; // <- Objects goes in there 
@@ -76,15 +76,17 @@
            des.classList.add("xsmall", "bright");
            des.innerHTML = 'English phrase:  ' + '&nbsp; ' + lesson.english + '&nbsp; ' + '&nbsp; ' + 'In Chinese:  ' + '&nbsp; ' + lesson.chinese + '&nbsp; ' + '&nbsp; ' + '  Pronounced:  ' + lesson.pronunciation; // <- Objects goes in there
            top.appendChild(des);
-		   
-		   
-		  var des2 = document.createElement("p");
-des2.classList.add("xsmall", "bright");
-var numbers = lotto.numbers.sort(function(a, b){return a-b});
-var lotNumbers = numbers;
-var showNumbers = lotNumbers.join(', ');
-des2.innerHTML = "Lucky Numbers ~ "+showNumbers;
-top.appendChild(des2);
+
+
+           var des2 = document.createElement("p");
+           des2.classList.add("xsmall", "bright");
+           var numbers = lotto.numbers.sort(function(a, b) {
+               return a - b
+           });
+           var lotNumbers = numbers;
+           var showNumbers = lotNumbers.join(', ');
+           des2.innerHTML = "Lucky Numbers ~ " + showNumbers;
+           top.appendChild(des2);
 
            wrapper.appendChild(top);
            return wrapper;
@@ -95,8 +97,8 @@ top.appendChild(des2);
            //	console.log(data);
            //this.today = data.Today;
            this.fortune = data.fortune;
-		   this.lesson = data.lesson;
-		   this.lotto = data.lotto;
+           this.lesson = data.lesson;
+           this.lotto = data.lotto;
            this.loaded = true;
        },
 

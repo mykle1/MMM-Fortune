@@ -1,17 +1,16 @@
 /* Magic Mirror
-    * Module: MMM-Fortune
-    *
-    * By Mykle1
-    * 
-    */
+ * Module: MMM-Fortune
+ *
+ * By Mykle1
+ * 
+ */
 const NodeHelper = require('node_helper');
 const request = require('request');
 const fs = require('fs');
 
 module.exports = NodeHelper.create({
 
-    start: function() {
-    },
+    start: function() {},
 
     getFortune: function(url) {
         request({
@@ -20,21 +19,21 @@ module.exports = NodeHelper.create({
         }, (error, response, body) => {
             if (!error && response.statusCode == 200) {
                 var result = JSON.parse(body)[0];
-                this.sendSocketNotification('FORTUNE_RESULT', result); 
+                this.sendSocketNotification('FORTUNE_RESULT', result);
             }
         });
     },
-       
+
 
     getDate: function() {
         return (new Date()).toLocaleDateString();
     },
-    
+
     //Subclass socketNotificationReceived received.
     socketNotificationReceived: function(notification, payload) {
         if (notification === 'GET_FORTUNE') {
-                this.getFortune(payload);
-            }
+            this.getFortune(payload);
+        }
     }
 
 });
