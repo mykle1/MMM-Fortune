@@ -41,7 +41,10 @@
        getDom: function() {
 
            var fortune = this.fortune;
-
+			var lesson = this.lesson;
+			var lotto = this.lotto;
+			
+			
            var wrapper = document.createElement("div");
            wrapper.className = "wrapper";
            wrapper.style.maxWidth = this.config.maxWidth;
@@ -71,14 +74,17 @@
 
            var des = document.createElement("p");
            des.classList.add("xsmall", "bright");
-           des.innerHTML = 'English phrase:  ' + '&nbsp; ' + this.lesson.english + '&nbsp; ' + '&nbsp; ' + 'In Chinese:  ' + '&nbsp; ' + this.lesson.chinese + '&nbsp; ' + '&nbsp; ' + '  Pronounced:  ' + this.lesson.pronunciation; // <- Objects goes in there
+           des.innerHTML = 'English phrase:  ' + '&nbsp; ' + lesson.english + '&nbsp; ' + '&nbsp; ' + 'In Chinese:  ' + '&nbsp; ' + lesson.chinese + '&nbsp; ' + '&nbsp; ' + '  Pronounced:  ' + lesson.pronunciation; // <- Objects goes in there
            top.appendChild(des);
 		   
 		   
-		   var des2 = document.createElement("p");
-           des2.classList.add("xsmall", "bright");
-           des2.innerHTML = 'Lucky Numbers' + '&nbsp; ' + ' ~   ' + '&nbsp; ' + this.lotto.numbers; // <- Objects goes in there
-           top.appendChild(des2);
+		  var des2 = document.createElement("p");
+des2.classList.add("xsmall", "bright");
+var numbers = lotto.numbers.sort(function(a, b){return a-b});
+var lotNumbers = numbers;
+var showNumbers = lotNumbers.join(', ');
+des2.innerHTML = "Lucky Numbers ~ "+showNumbers;
+top.appendChild(des2);
 
            wrapper.appendChild(top);
            return wrapper;

@@ -19,17 +19,3 @@
   color: #62FF00;              /* color for Phrase and Lucky Numbers text */
   font-size: 18px;          /* size for Phrase and Lucky Numbers text */
 }
-
-
-/* ##### CODE BELOW IS FOR AUTHORIZED PERSONNEL ONLY ##### */
-
-.MMM-Fortune .content {
-  width: 100%;
-  background-position: 11px 0;
-  background-repeat: no-repeat;
-  color: #a9a356;
-}
-
-h3:first-letter {
-  text-transform: capitalize;
-}
