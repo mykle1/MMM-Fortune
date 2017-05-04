@@ -68,7 +68,7 @@
 
            var title = document.createElement("h3");
            title.classList.add("small");
-           title.innerHTML = this.fortune.message; // <- Objects goes in there 
+           title.innerHTML = this.fortune.message;
            top.appendChild(title);
 
 
