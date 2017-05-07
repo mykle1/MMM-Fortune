@@ -5,17 +5,24 @@
  */
 
 .MMM-Fortune .header {
-  text-align: center;       /* Aligns header text left, center or right) */
-  font-size: 15px;          /* Sets header text size */
-  color: #62FF00;             /* Sets header text color */
+  text-align: center;          /* Aligns header text left, center or right) */
+  font-size: 15px;             /* Sets header text size */
+  color: #62FF00;              /* Sets header text color */
 }
 
 .MMM-Fortune h3.small {
   color: #62FF00;              /* color for the Fortune text */
-  font-size: 21px;          /* size for the Fortune text */
+  font-size: 21px;             /* size for the Fortune text */
+  margin: 5px;                 /* Margin between Fortune and Phrases */
 }
 
 .MMM-Fortune p.xsmall.bright {
   color: #62FF00;              /* color for Phrase and Lucky Numbers text */
-  font-size: 18px;          /* size for Phrase and Lucky Numbers text */
+  font-size: 18px;             /* size for Phrase and Lucky Numbers text */
+}
+
+.MMM-Fortune p.xsmall.bright {
+  color: #62FF00;              /* color for Phrase and Lucky Numbers text */
+  font-size: 18px;             /* size for Phrase and Lucky Numbers text */
+  margin: 5px;                 /* Margin between Phrase and Lucky Numbers */
 }
