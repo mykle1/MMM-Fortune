@@ -94,8 +94,6 @@
        },
 
        processFortune: function(data) {
-           //	console.log(data);
-           //this.today = data.Today;
            this.fortune = data.fortune;
            this.lesson = data.lesson;
            this.lotto = data.lotto;
