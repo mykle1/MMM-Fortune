@@ -25,6 +25,8 @@ Fortunes exactly as you would find them inside a Fortune Cookie. Words of wisdom
 ## Installation
 
 * `git clone https://github.com/mykle1/MMM-Fortune.git` into the `~/MagicMirror/modules` directory.
+* `cd MMM-Fortune`
+* `npm install`
 
 ## Add to Config.js
 
