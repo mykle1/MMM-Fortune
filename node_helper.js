@@ -6,7 +6,6 @@
  */
 const NodeHelper = require('node_helper');
 const request = require('request');
-const fs = require('fs');
 
 module.exports = NodeHelper.create({
 
@@ -28,8 +27,7 @@ module.exports = NodeHelper.create({
     getDate: function() {
         return (new Date()).toLocaleDateString();
     },
-
-    //Subclass socketNotificationReceived received.
+    
     socketNotificationReceived: function(notification, payload) {
         if (notification === 'GET_FORTUNE') {
             this.getFortune(payload);
