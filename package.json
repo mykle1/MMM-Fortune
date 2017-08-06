@@ -4,8 +4,7 @@
   "description": "Fortune Cookie Module",
   "main": "MMM-Fortune.js",
   "dependencies": {
-    "request": "^2.79.0",
-    "semver": "^5.3.0"
+    "request": "^2.79.0"
   },
   "devDependencies": {},
   "scripts": {
