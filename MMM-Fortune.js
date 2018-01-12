@@ -92,6 +92,18 @@
            return wrapper;
 
        },
+      
+  /////  Add this function to the modules you want to control with voice //////
+
+    notificationReceived: function(notification, payload) {
+        if (notification === 'HIDE_FORTUNE') {
+            this.hide(1000);
+        }  else if (notification === 'SHOW_FORTUNE') {
+            this.show(1000);
+        }
+            
+    },
+      
 
        processFortune: function(data) {
            this.fortune = data.fortune;
